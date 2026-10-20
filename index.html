@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BuyBuddy — Privacy Policy & Account Deletion</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #2563eb;
+            --primary-hover: #1d4ed8;
+            --bg: #0f172a;
+            --surface: #1e293b;
+            --surface-card: #243247;
+            --text-main: #f8fafc;
+            --text-muted: #94a3b8;
+            --border: #334155;
+            --danger: #ef4444;
+            --success: #10b981;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background-color: var(--bg);
+            color: var(--text-main);
+            line-height: 1.7;
+            padding: 0 1rem;
+        }
+
+        header {
+            max-width: 860px;
+            margin: 0 auto;
+            padding: 2.5rem 0 1.5rem;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            border-bottom: 1px solid var(--border);
+        }
+
+        .brand {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            text-decoration: none;
+            color: var(--text-main);
+        }
+
+        .brand-icon {
+            width: 42px;
+            height: 42px;
+            background: linear-gradient(135deg, #3b82f6, #1d4ed8);
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.3rem;
+            font-weight: 700;
+        }
+
+        .brand-title {
+            font-size: 1.4rem;
+            font-weight: 700;
+            letter-spacing: -0.02em;
+        }
+
+        nav {
+            display: flex;
+            gap: 1rem;
+        }
+
+        nav a {
+            color: var(--text-muted);
+            text-decoration: none;
+            font-size: 0.95rem;
+            font-weight: 500;
+            padding: 0.5rem 0.85rem;
+            border-radius: 8px;
+            transition: all 0.2s;
+        }
+
+        nav a:hover, nav a.active {
+            color: var(--text-main);
+            background: var(--surface);
+        }
+
+        main {
+            max-width: 860px;
+            margin: 2.5rem auto 5rem;
+        }
+
+        .card {
+            background: var(--surface);
+            border: 1px solid var(--border);
+            border-radius: 16px;
+            padding: 2.5rem;
+            margin-bottom: 2.5rem;
+            box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.3);
+        }
+
+        h1 {
+            font-size: 2.2rem;
+            font-weight: 700;
+            letter-spacing: -0.03em;
+            margin-bottom: 0.5rem;
+            color: #ffffff;
+        }
+
+        .last-updated {
+            color: var(--text-muted);
+            font-size: 0.9rem;
+            margin-bottom: 2rem;
+            display: inline-block;
+        }
+
+        h2 {
+            font-size: 1.35rem;
+            font-weight: 600;
+            margin: 2rem 0 1rem;
+            color: #60a5fa;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        p {
+            margin-bottom: 1.1rem;
+            color: #cbd5e1;
+        }
+
+        ul {
+            margin: 0.5rem 0 1.25rem 1.5rem;
+            color: #cbd5e1;
+        }
+
+        li {
+            margin-bottom: 0.5rem;
+        }
+
+        .highlight-box {
+            background: rgba(37, 99, 235, 0.1);
+            border-left: 4px solid var(--primary);
+            padding: 1rem 1.25rem;
+            border-radius: 0 10px 10px 0;
+            margin: 1.5rem 0;
+        }
+
+        .highlight-box p {
+            margin-bottom: 0;
+            color: #bfdbfe;
+        }
+
+        .danger-box {
+            background: rgba(239, 68, 68, 0.1);
+            border-left: 4px solid var(--danger);
+            padding: 1.25rem;
+            border-radius: 0 10px 10px 0;
+            margin: 1.5rem 0;
+        }
+
+        .danger-box h3 {
+            color: #fca5a5;
+            font-size: 1.1rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .danger-box p {
+            color: #fecaca;
+            margin-bottom: 0;
+        }
+
+        .step-list {
+            list-style: none;
+            margin: 1rem 0;
+            counter-reset: steps;
+        }
+
+        .step-list li {
+            counter-increment: steps;
+            position: relative;
+            padding-left: 2.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .step-list li::before {
+            content: counter(steps);
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 1.8rem;
+            height: 1.8rem;
+            background: var(--surface-card);
+            border: 1px solid var(--primary);
+            color: #60a5fa;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 0.85rem;
+            font-weight: 700;
+        }
+
+        .btn-email {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            background: var(--primary);
+            color: white;
+            padding: 0.75rem 1.4rem;
+            border-radius: 10px;
+            text-decoration: none;
+            font-weight: 600;
+            margin-top: 0.75rem;
+            transition: background 0.2s;
+        }
+
+        .btn-email:hover {
+            background: var(--primary-hover);
+        }
+
+        footer {
+            max-width: 860px;
+            margin: 0 auto 3rem;
+            text-align: center;
+            color: var(--text-muted);
+            font-size: 0.85rem;
+            border-top: 1px solid var(--border);
+            padding-top: 2rem;
+        }
+
+        @media (max-width: 640px) {
+            header {
+                flex-direction: column;
+                gap: 1rem;
+                align-items: flex-start;
+            }
+            .card {
+                padding: 1.5rem;
+            }
+            h1 {
+                font-size: 1.75rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <a href="#privacy-policy" class="brand">
+            <div class="brand-icon">🛒</div>
+            <span class="brand-title">BuyBuddy</span>
+        </a>
+        <nav>
+            <a href="#privacy-policy" class="active">Privacy Policy</a>
+            <a href="#delete-account">Account Deletion</a>
+        </nav>
+    </header>
+
+    <main>
+        <!-- PRIVACY POLICY SECTION -->
+        <section id="privacy-policy" class="card">
+            <h1>Privacy Policy</h1>
+            <span class="last-updated">Effective Date: October 20, 2026</span>
+
+            <p>Welcome to <strong>BuyBuddy</strong>. Your privacy is critically important to us. This Privacy Policy explains how BuyBuddy collects, uses, and safeguards your personal data when you use our mobile application and related services.</p>
+
+            <div class="highlight-box">
+                <p><strong>Core Promise:</strong> We never sell your personal data. Your shopping lists and personal information are strictly used to provide, sync, and secure your shopping lists across your devices and with people you choose to collaborate with.</p>
+            </div>
+
+            <h2>1. Information We Collect</h2>
+            <p>BuyBuddy collects the minimum necessary information to provide collaborative shopping list features:</p>
+            <ul>
+                <li><strong>Account Credentials & Profile:</strong> When you sign up via Email or Google Sign-In, we collect your email address, display name, and optional profile photo URL provided by Google.</li>
+                <li><strong>Shopping Lists & User Content:</strong> Titles of shopping lists, items added, notes, quantities, completion statuses, custom item names, and categories you create.</li>
+                <li><strong>Collaborator Details:</strong> Email addresses of collaborators you invite to share your lists.</li>
+                <li><strong>Technical & Security Data:</strong> Cryptographic attestation tokens generated via Google Play Integrity and Firebase App Check to protect the backend services from unauthorized access and bots.</li>
+            </ul>
+
+            <h2>2. How We Use Your Information</h2>
+            <p>We process your data exclusively for the following purposes:</p>
+            <ul>
+                <li>To authenticate your identity and provide secure access to your shopping lists.</li>
+                <li>To synchronize shopping lists in real-time across your authorized devices and with shared members.</li>
+                <li>To send in-app sharing invitations to the collaborators you designate.</li>
+                <li>To prevent abuse, fraud, and unauthorized API traffic via Firebase App Check.</li>
+            </ul>
+
+            <h2>3. Third-Party Service Providers</h2>
+            <p>BuyBuddy uses reliable, industry-standard Google Cloud and Firebase infrastructure to host and protect data:</p>
+            <ul>
+                <li><strong>Firebase Authentication:</strong> Manages sign-up, email verification, and secure Google Sign-In.</li>
+                <li><strong>Cloud Firestore:</strong> Stores and synchronizes shopping lists, items, and sharing relationships securely.</li>
+                <li><strong>Cloud Functions for Firebase:</strong> Manages server-side list sharing permissions and account deletion flows.</li>
+                <li><strong>Firebase App Check / Google Play Integrity:</strong> Verifies that requests originate from authentic BuyBuddy apps installed on genuine Android devices.</li>
+            </ul>
+
+            <h2>4. Data Storage & Security</h2>
+            <p>Your data is stored in secure Google Cloud data centers (Asia-South1 region). All communication between the BuyBuddy mobile app and Firebase servers is encrypted in transit using industry-standard TLS/HTTPS protocols. Access is strictly controlled via Firestore Security Rules and Cloud Functions.</p>
+
+            <h2>5. Data Retention & Deletion Rights</h2>
+            <p>You have full ownership and control over your personal data:</p>
+            <ul>
+                <li>You can create, edit, and delete any list or item directly inside the app at any time.</li>
+                <li>You have the right to permanently delete your entire account and all associated data at any time (see the Account Deletion section below).</li>
+            </ul>
+
+            <h2>6. Children's Privacy</h2>
+            <p>BuyBuddy does not knowingly collect or solicit personal information from children under the age of 13. If we discover that a child under 13 has provided us with personal data, we will immediately remove such information and delete the associated account.</p>
+
+            <h2>7. Contact Us</h2>
+            <p>If you have any questions, feedback, or concerns regarding this Privacy Policy, please contact the developer at:</p>
+            <p><strong>Email:</strong> <a href="mailto:kasunthivanka2001@gmail.com" style="color: #60a5fa;">kasunthivanka2001@gmail.com</a></p>
+        </section>
+
+        <!-- ACCOUNT DELETION SECTION -->
+        <section id="delete-account" class="card">
+            <h1>Account & Data Deletion</h1>
+            <span class="last-updated">Google Play Data Safety Compliance</span>
+
+            <p>BuyBuddy provides full autonomy for users to delete their account and associated personal data at any time, both from within the mobile application and externally via this web page.</p>
+
+            <div class="danger-box">
+                <h3>⚠️ What Happens When You Delete Your Account</h3>
+                <p>Account deletion is permanent and cannot be undone. Upon confirmation, the following data is permanently purged:</p>
+                <ul style="margin: 0.5rem 0 0 1.25rem;">
+                    <li>Your Firebase Authentication credentials and user record.</li>
+                    <li>All personal shopping lists and items owned by you in Cloud Firestore.</li>
+                    <li>Your collaborator access and permissions on any shared lists.</li>
+                    <li>All pending and accepted list invitations associated with your account.</li>
+                    <li>Local database caches (Drift / local storage) on your mobile device.</li>
+                </ul>
+            </div>
+
+            <h2>Method 1: Delete Directly Inside the App (Instant)</h2>
+            <p>The fastest way to delete your account is from inside the BuyBuddy mobile app:</p>
+            <ol class="step-list">
+                <li>Open the <strong>BuyBuddy</strong> app on your Android device.</li>
+                <li>Tap on <strong>Settings</strong> (gear icon).</li>
+                <li>Scroll down to the <strong>Account</strong> section and tap <strong>Delete Account</strong>.</li>
+                <li>Confirm your identity by entering your password or verifying via Google Sign-In.</li>
+                <li>Confirm the deletion prompt. Your account and all data will be permanently wiped immediately.</li>
+            </ol>
+
+            <h2>Method 2: Request Deletion Outside the App (Web Request)</h2>
+            <p>If you have already uninstalled the BuyBuddy application from your device, you can request manual account and data deletion by emailing our support team:</p>
+            <ol class="step-list">
+                <li>Send an email from the <strong>same email address</strong> associated with your BuyBuddy account.</li>
+                <li>Include the subject line: <code>BuyBuddy Account Deletion Request</code>.</li>
+                <li>State clearly in the body that you request the permanent deletion of your BuyBuddy account and all related data.</li>
+            </ol>
+            
+            <a href="mailto:kasunthivanka2001@gmail.com?subject=BuyBuddy%20Account%20Deletion%20Request" class="btn-email">
+                📧 Send Deletion Request Email
+            </a>
+            <p style="margin-top: 1rem; font-size: 0.9rem; color: var(--text-muted);">Requests sent via email will be verified and completed within 7 business days.</p>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 BuyBuddy. All rights reserved. Designed for Google Play Store compliance.</p>
+    </footer>
+
+</body>
+</html>
