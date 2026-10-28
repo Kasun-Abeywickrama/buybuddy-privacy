@@ -267,7 +267,7 @@
         <!-- PRIVACY POLICY SECTION -->
         <section id="privacy-policy" class="card">
             <h1>Privacy Policy</h1>
-            <span class="last-updated">Effective Date: October 20, 2026</span>
+            <span class="last-updated">Effective Date: October 28, 2026</span>
 
             <p>Welcome to <strong>BuyBuddy</strong>. Your privacy is critically important to us. This Privacy Policy explains how BuyBuddy collects, uses, and safeguards your personal data when you use our mobile application and related services.</p>
 
@@ -279,9 +279,10 @@
             <p>BuyBuddy collects the minimum necessary information to provide collaborative shopping list features:</p>
             <ul>
                 <li><strong>Account Credentials & Profile:</strong> When you sign up via Email or Google Sign-In, we collect your email address, display name, and optional profile photo URL provided by Google.</li>
-                <li><strong>Shopping Lists & User Content:</strong> Titles of shopping lists, items added, notes, quantities, completion statuses, custom item names, and categories you create.</li>
-                <li><strong>Collaborator Details:</strong> Email addresses of collaborators you invite to share your lists.</li>
-                <li><strong>Technical & Security Data:</strong> Cryptographic attestation tokens generated via Google Play Integrity and Firebase App Check to protect the backend services from unauthorized access and bots.</li>
+                <li><strong>Shopping Lists & User Content:</strong> List titles, items, notes, quantities, units, completion statuses, custom item names, and selected categories. We also store purchase history, purchase times, and account identifiers recording who added or completed items.</li>
+                <li><strong>Collaborator Details:</strong> Account identifiers, names, email addresses, optional profile photo URLs, list memberships, and invitation records used for sharing.</li>
+                <li><strong>Technical & Security Data:</strong> App attestation tokens and integrity signals processed through Google Play Integrity and Firebase App Check, account-based request counters used to limit abuse, deletion-recovery records, and operational logs used to troubleshoot the service. Google infrastructure may also process network information such as IP addresses.</li>
+                <li><strong>Device Storage:</strong> The app stores local copies of shopping data, purchase history, recommendation data, and preferences to support offline use and your selected settings.</li>
             </ul>
 
             <h2>2. How We Use Your Information</h2>
@@ -290,63 +291,70 @@
                 <li>To authenticate your identity and provide secure access to your shopping lists.</li>
                 <li>To synchronize shopping lists in real-time across your authorized devices and with shared members.</li>
                 <li>To send in-app sharing invitations to the collaborators you designate.</li>
+                <li>To suggest items and quantities based on shopping history, and remember your preferences.</li>
+                <li>To process account deletion, recover interrupted deletion requests, and troubleshoot service errors.</li>
                 <li>To prevent abuse, fraud, and unauthorized API traffic via Firebase App Check.</li>
             </ul>
+
+            <p><strong>What other users can see:</strong> Shared-list members can access the list's items, notes, purchase history, and member information. Invitation participants can see information needed to identify the invitation and its sender. A signed-in user with a verified email can search for an existing account by its full email address; a successful search reveals that the account exists and returns its display name, email address, and account identifier. There is no public browsable user directory.</p>
 
             <h2>3. Third-Party Service Providers</h2>
             <p>BuyBuddy uses reliable, industry-standard Google Cloud and Firebase infrastructure to host and protect data:</p>
             <ul>
                 <li><strong>Firebase Authentication:</strong> Manages sign-up, email verification, and secure Google Sign-In.</li>
                 <li><strong>Cloud Firestore:</strong> Stores and synchronizes shopping lists, items, and sharing relationships securely.</li>
-                <li><strong>Cloud Functions for Firebase:</strong> Manages server-side list sharing permissions and account deletion flows.</li>
-                <li><strong>Firebase App Check / Google Play Integrity:</strong> Verifies that requests originate from authentic BuyBuddy apps installed on genuine Android devices.</li>
+                <li><strong>Cloud Functions for Firebase:</strong> Handles list creation, sharing permissions, purchase processing, and account deletion.</li>
+                <li><strong>Firebase App Check / Google Play Integrity:</strong> Helps verify app authenticity and device integrity to reduce unauthorized requests.</li>
             </ul>
 
             <h2>4. Data Storage & Security</h2>
-            <p>Your data is stored in secure Google Cloud data centers (Asia-South1 region). All communication between the BuyBuddy mobile app and Firebase servers is encrypted in transit using industry-standard TLS/HTTPS protocols. Access is strictly controlled via Firestore Security Rules and Cloud Functions.</p>
+            <p>BuyBuddy uses Google Cloud and Firebase to process and store cloud data. Our backend functions run in the asia-south1 region; storage and processing locations for other Google services depend on their configuration and service infrastructure. We do not promise that all data remains in one region. The app also stores data locally on your device.</p>
+            <p>Communication between the app and Firebase uses TLS/HTTPS encryption in transit. Firestore Security Rules, backend permission checks, and App Check help protect access. These measures reduce risk but cannot guarantee absolute security.</p>
 
             <h2>5. Data Retention & Deletion Rights</h2>
-            <p>You have full ownership and control over your personal data:</p>
+            <p>We retain account and shopping data while needed to provide the service, until you remove it through an available app feature or complete account deletion. Purchase history is retained to provide history and recommendations; it does not currently expire automatically.</p>
             <ul>
-                <li>You can create, edit, and delete any list or item directly inside the app at any time.</li>
-                <li>You have the right to permanently delete your entire account and all associated data at any time (see the Account Deletion section below).</li>
+                <li>You can manage items in lists you belong to. List owners control list deletion and membership.</li>
+                <li>You can request account deletion inside the app or by email, as described below. The effects on owned lists, other people's lists, and device copies are explained in that section.</li>
+                <li>Operational logs and deletion-recovery records are separate from shopping content. Recovery records support completion of interrupted deletion and are removed when cleanup is acknowledged; an interrupted process can leave a recovery record. Contact us if you need help completing deletion.</li>
             </ul>
 
             <h2>6. Children's Privacy</h2>
             <p>BuyBuddy does not knowingly collect or solicit personal information from children under the age of 13. If we discover that a child under 13 has provided us with personal data, we will immediately remove such information and delete the associated account.</p>
 
             <h2>7. Contact Us</h2>
-            <p>If you have any questions, feedback, or concerns regarding this Privacy Policy, please contact the developer at:</p>
+            <p>BuyBuddy is provided by Kasun Abeywickrama. If you have questions, feedback, or concerns about this policy or your data, contact the developer at:</p>
             <p><strong>Email:</strong> <a href="mailto:kasunthivanka2001@gmail.com" style="color: #60a5fa;">kasunthivanka2001@gmail.com</a></p>
         </section>
 
         <!-- ACCOUNT DELETION SECTION -->
         <section id="delete-account" class="card">
             <h1>Account & Data Deletion</h1>
-            <span class="last-updated">Google Play Data Safety Compliance</span>
+            <span class="last-updated">Request deletion in the app or by email</span>
 
             <p>BuyBuddy provides full autonomy for users to delete their account and associated personal data at any time, both from within the mobile application and externally via this web page.</p>
 
             <div class="danger-box">
                 <h3>⚠️ What Happens When You Delete Your Account</h3>
-                <p>Account deletion is permanent and cannot be undone. Upon confirmation, the following data is permanently purged:</p>
+                <p>Account deletion is permanent and cannot be undone. When server-side deletion completes:</p>
                 <ul style="margin: 0.5rem 0 0 1.25rem;">
                     <li>Your Firebase Authentication credentials and user record.</li>
-                    <li>All personal shopping lists and items owned by you in Cloud Firestore.</li>
-                    <li>Your collaborator access and permissions on any shared lists.</li>
-                    <li>All pending and accepted list invitations associated with your account.</li>
-                    <li>Local database caches (Drift / local storage) on your mobile device.</li>
+                    <li>Your user profile and account-specific rate-limit records are deleted.</li>
+                    <li>All lists you own are deleted, including shared lists, their items, custom items, and purchase history. Other members lose access to those lists.</li>
+                    <li>Your membership in other people's lists and invitations sent by or addressed to you are removed.</li>
+                    <li>Items, notes, custom items, and purchase history you contributed to lists owned by others can remain for those members. Your account identifier in attribution fields is replaced with <code>deleted-account</code>. This does not remove personal information you typed into the content itself; remove that information before leaving a list or contact us for help.</li>
+                    <li>The in-app deletion flow clears account-specific local data and the Firestore cache on the device completing that flow. Email deletion cannot remotely erase offline copies on other devices or copies already saved by other people. Clear app storage or uninstall BuyBuddy on your devices to remove remaining local copies.</li>
                 </ul>
             </div>
 
-            <h2>Method 1: Delete Directly Inside the App (Instant)</h2>
+            <h2>Method 1: Delete Directly Inside the App</h2>
             <p>The fastest way to delete your account is from inside the BuyBuddy mobile app:</p>
             <ol class="step-list">
                 <li>Open the <strong>BuyBuddy</strong> app on your Android device.</li>
                 <li>Tap on <strong>Settings</strong> (gear icon).</li>
                 <li>Scroll down to the <strong>Account</strong> section and tap <strong>Delete Account</strong>.</li>
-                <li>Confirm your identity by entering your password or verifying via Google Sign-In.</li>
-                <li>Confirm the deletion prompt. Your account and all data will be permanently wiped immediately.</li>
+                <li>Follow the confirmation prompts and verify your identity using your password or Google Sign-In.</li>
+                <li>Keep the app connected while deletion completes. Deletion runs in several steps; if interrupted, follow the app's recovery prompts to continue. It is not guaranteed to complete immediately.</li>
             </ol>
 
             <h2>Method 2: Request Deletion Outside the App (Web Request)</h2>
@@ -361,11 +369,12 @@
                 📧 Send Deletion Request Email
             </a>
             <p style="margin-top: 1rem; font-size: 0.9rem; color: var(--text-muted);">Requests sent via email will be verified and completed within 7 business days.</p>
+            <p>Do not send your password or sign-in codes. We may ask for additional confirmation to protect your account. You do not need to reinstall the app to submit an email request. The same deletion effects and limits described above apply.</p>
         </section>
     </main>
 
     <footer>
-        <p>&copy; 2026 BuyBuddy. All rights reserved. Designed for Google Play Store compliance.</p>
+        <p>&copy; 2026 BuyBuddy. All rights reserved.</p>
     </footer>
 
 </body>
